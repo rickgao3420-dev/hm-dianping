@@ -41,6 +41,11 @@ Thumbs.db
 .env.*
 !.env.example
 
+### Local Spring Boot configuration (commit the template only) ###
+/src/main/resources/application*.yaml
+/src/main/resources/application*.yml
+!/src/main/resources/application.example.yaml
+
 ### Bundled Nginx runtime (keep locally) ###
 /nginx-1.18.0/nginx.exe
 /nginx-1.18.0/logs/

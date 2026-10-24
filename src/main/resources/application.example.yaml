@@ -1,0 +1,32 @@
+# 初始化时，将本文件复制为同目录的 application.yaml，再填写本机连接信息。
+# PowerShell（项目根目录）：
+# Copy-Item src/main/resources/application.example.yaml src/main/resources/application.yaml
+# application.yaml 及本地 profile 配置已被 Git 忽略，请只提交此模板。
+server:
+  port: 8081
+spring:
+  application:
+    name: hmdp
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/hmdp?useSSL=false&serverTimezone=UTC
+    username: root
+    password: "your_mysql_password"
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    # Redis 未设置密码时，填写空字符串：password: ""
+    password: "your_redis_password"
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 1
+        time-between-eviction-runs: 10s
+  jackson:
+    default-property-inclusion: non_null # JSON 序列化时忽略值为 null 的字段
+mybatis-plus:
+  type-aliases-package: com.hmdp.entity
+logging:
+  level:
+    com.hmdp: debug
