@@ -16,7 +16,7 @@
 | `nginx-1.18.0/logs/`、`temp/` | Nginx 日志、进程文件和缓存 | 否 |
 | `nginx-1.18.0/nginx.exe`、`docs/`、`contrib/` | 本机 Nginx 程序及发行包附属文件 | 否 |
 
-前端来自课程配套仓库 `https://gitee.com/huyi612/hmdp-web.git`。原前端子目录自带两次 2022 年的 Git 提交，属于课程作者的历史。2026-10-24 将旧 Git 元数据备份到项目外的 `../_git-backups/hm-dianping-时间戳/frontend.git`，并从项目根目录重新建立独立历史，保留全部现有源码与图片。
+前端来自课程配套仓库 `https://gitee.com/huyi612/hmdp-web.git`。原前端子目录自带的两次 2022 年 Git 提交及其备份已清除；项目从根目录重新建立独立历史，保留全部现有源码与图片。
 
 本地 Nginx 发行包被保留；在其他电脑检出项目后，需要另行准备相应 Nginx 程序以及 `logs/`、`temp/` 运行目录。新仓库未关联远程地址。
 
